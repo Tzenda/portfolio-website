@@ -17,6 +17,11 @@
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
 
+  /* Weather App */
+  --wa-banner: #f9ff00
+
+  /* Weather App */
+
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -483,4 +488,13 @@ header {
 
 .back-to-top:hover {
   opacity: 40%;
+}
+
+/* Weather App */
+
+.weather__subtitle--about {
+  background: var(--clr-accent);
+  padding: 0.25em 1em;
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
 }
