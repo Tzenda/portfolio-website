@@ -25,9 +25,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
-
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="/js/weather-app.js"></script>
+    <script src="/js/weather-app.js" defer></script>
   </head>
 
   <body>
@@ -123,13 +122,20 @@
               </svg>
             </button>
           </div>
-          <div class="weather">
+          <div class="weather loading">
             <h2 class="city">Weather in Denver</h2>
-            <h1 class="temp">51°C</h1>
-            <img src="" alt="" class="icon" />
-            <div class="description">Cloudy</div>
-            <div class="humidity">Humidity 60%</div>
-            <div class="wind">Wind speed: 6.2 km/h</div>
+            <h3 class="temp">51°C</h3>
+            <div class="weather__description"></div>
+            <img
+              src="https://openweathermap.org/img/wn/04n.png"
+              alt=""
+              class="icon"
+            />
+            
+              <div class="description">Cloudy</div>
+              <div class="humidity">Humidity 60%</div>
+              <div class="wind">Wind speed: 6.2 km/h</div>
+            </div>
           </div>
         </div>
       </div>

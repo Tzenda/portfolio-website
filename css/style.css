@@ -96,6 +96,41 @@ input.search__bar {
   width: calc(100% - 60px);
 }
 
+h3.temp {
+  margin: 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.weather__description {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.icon {
+  margin-left: -8px;
+}
+
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+
+.weather.loading:after {
+  visibility: visible;
+  content: "Loading . . .";
+  color: white;
+  position: absolute;
+  top: 0;
+
+}
+
 /* Weather App */
 
 @media (min-width: 800px) {
