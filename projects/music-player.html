@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Music Player</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="js/weather-app.js" defer></script>
+    <script src="js/music-player.js" defer></script>
   </head>
 
   <body>
@@ -88,58 +88,36 @@
       />
     </section>
 
-    <!-- Weather app -->
+    <!-- Music player -->
 
-    <section class="weather-app" id="weather">
-      <h2 class="section__title section__title--about">Weather App</h2>
-      <p class="section__subtitle weather__subtitle--about">
-        Weather App based in JS
-      </p>
-      <div class="weather__div">
-        <div class="weather__card">
-          <div class="search">
-            <input type="text" class="search__bar" placeholder="Search" />
-            <button class="weather__button">
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                stroke-width="0"
-                viewBox="0 0 16 16"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z"
-                  clip-rule="evenodd"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div class="weather loading">
-            <h2 class="city">Weather in Denver</h2>
-            <h3 class="temp">51°C</h3>
-            <div class="weather__description"></div>
-            <img
-              src="https://openweathermap.org/img/wn/04n.png"
-              alt=""
-              class="icon"
-            />
-            
-              <div class="description">Cloudy</div>
-              <div class="humidity">Humidity 60%</div>
-              <div class="wind">Wind speed: 6.2 km/h</div>
-            </div>
-          </div>
+    <h1>Music Player</h1>
+
+    <div class="music__container">
+      <div class="music__info">
+        <h4 id="title">Ukulele</h4>
+        <div class="progress__container">
+          <div class="progress"></div>
         </div>
       </div>
-    </section>
+
+      <audio src="music/ukulele.mp3" id="audio"></audio>
+
+      <div class="img__container">
+        <img src="img/ukulele.jpg" alt="music-cover" id="cover" />
+
+        <div class="navigation">
+          <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- My Work -->
     <section class="my-work" id="work">
