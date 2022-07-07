@@ -1,0 +1,22 @@
+const express = require("express");
+
+const fetch = (...args) =>
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
+
+const app = express();
+
+app.use(express.static("."));
+
+app.get("/give_me_weather/:city", (req, res) => {
+  fetch(
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+      req.params.city +
+      "&units=metric&appid=207821d74f9580114631db0bdcdaa0e7"
+  )
+    .then((response) => response.json())
+    .then((data) => res.status(200).json(data));
+});
+
+app.listen(80, () => {
+  console.log("The server is runnign");
+});
