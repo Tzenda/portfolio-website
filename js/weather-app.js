@@ -1,6 +1,6 @@
 let weather = {
   fetchWeather: function (city) {
-    fetch("/js/weather-app-server/weather-app-serve.js")
+    fetch("https://replit.com/@Ijsyouridea/Robintest#index.js")
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
   },
